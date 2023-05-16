@@ -99,4 +99,10 @@ view: tbl_leads {
     type: count
     drill_fields: [area_name, region_name, branch_name]
   }
+
+  measure: NOC {
+    type: count_distinct
+    drill_fields: [gcif_no]
+  }
+
 }
