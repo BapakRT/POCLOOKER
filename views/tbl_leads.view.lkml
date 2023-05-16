@@ -102,7 +102,7 @@ view: tbl_leads {
 
   measure: NOC {
     type: count_distinct
-    drill_fields: [gcif_no]
+    sql: ${TABLE}.gcif_no ;;
   }
 
 }
