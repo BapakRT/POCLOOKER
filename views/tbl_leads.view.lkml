@@ -95,14 +95,10 @@ view: tbl_leads {
     sql: ${TABLE}.VISIT ;;
   }
 
-  measure: count {
-    type: count
-    drill_fields: [area_name, region_name, branch_name]
-  }
-
   measure: NOC {
     type: count_distinct
     sql: ${TABLE}.gcif_no ;;
   }
+
 
 }
