@@ -22,7 +22,9 @@ explore: nti_reconcile_stg {}
 
 explore: test_nti_deal_stg {}
 
-explore: tbl_deal {}
+explore: tbl_deal {
+  required_access_grants: [admin_only]
+}
 
 explore: tbl_leads {}
 

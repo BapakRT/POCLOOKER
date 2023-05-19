@@ -80,6 +80,7 @@ view: tbl_leads {
     sql: ${TABLE}.REGION_NAME ;;
   }
 
+
   dimension: sales {
     type: number
     sql: ${TABLE}.SALES ;;
@@ -98,6 +99,14 @@ view: tbl_leads {
   measure: NOC {
     type: count_distinct
     sql: ${TABLE}.gcif_no ;;
+  }
+
+  measure: Filter_NOC_JAKARTA {
+    type: count_distinct
+    sql: ${TABLE}.gcif_no ;;
+    filters: [region_name: "JAKARTA"]
+    required_access_grants: [admin_only]
+
   }
 
 
