@@ -7,6 +7,10 @@ datagroup: poc_looker_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
+access_grant:  admin_only{
+  user_attribute: region_filter
+  allowed_values: ["1"]
+}
 
 persist_with: poc_looker_default_datagroup
 
