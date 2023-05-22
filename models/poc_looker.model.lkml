@@ -27,7 +27,12 @@ explore: tbl_deal {
   required_access_grants: [admin_only]
 }
 
-explore: tbl_leads {}
+explore: tbl_leads {
+  access_filter: {
+    field: tbl_leads.region_name
+    user_attribute: region_filter
+  }
+}
 
 explore: test_nti_reconcile_stg {}
 
